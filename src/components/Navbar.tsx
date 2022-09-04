@@ -3,15 +3,17 @@ import styled from "styled-components";
 import LogoIcon from "../asset/Logo";
 import { Flex } from "../styles";
 import { device } from "./Response";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Container>
       <div className="logo">
         <LogoIcon />
       </div>
       <div className="menu">
-        <ul>
+        <ul className={isOpen ? "active" : ""}>
           <li className="active">
             <Link href="/">
               <a> Home</a>
@@ -30,10 +32,13 @@ const Navbar = () => {
         </ul>
 
         <button className="trailBtn">Trail for 7 days</button>
-        <div className="menuBtn">
-          <p></p>
-          <p></p>
-          <p></p>
+        <div
+          onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+          className="menuBtn"
+        >
+          <p style={{ background: isOpen ? "white" : "black" }}></p>
+          <p style={{ background: isOpen ? "white" : "black" }}></p>
+          <p style={{ background: isOpen ? "white" : "black" }}></p>
         </div>
       </div>
     </Container>
@@ -119,11 +124,12 @@ const Container = styled.nav`
     margin-left: 23px;
     cursor: pointer;
     display: none;
+    z-index: 9999;
     p {
       width: 23px;
       height: 2px;
-      background: black;
       margin-bottom: 5px;
+      background: inherit;
     }
   }
 
@@ -138,7 +144,7 @@ const Container = styled.nav`
       ul {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -150%;
         width: 100%;
         min-height: 100vh;
         height: 100%;
@@ -147,8 +153,7 @@ const Container = styled.nav`
         flex-direction: column;
         justify-content: space-around;
         padding-top: 100px;
-        display: none;
-
+        transition: right 0.8s ease-in-out;
         li {
           position: relative;
           color: white;
@@ -173,6 +178,9 @@ const Container = styled.nav`
             }
           }
         }
+      }
+      ul.active {
+        right: 0;
       }
     }
     .menuBtn {

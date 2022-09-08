@@ -13,14 +13,16 @@ export const Container = styled.header`
     grid-template-columns: 57% 43%;
     padding-top: 30px;
     gap: 1rem;
+    position: relative;
     .left {
       z-index: 999;
       .bgCircle {
         position: absolute;
         width: 214px;
         height: 214px;
-        left: 373px;
-        top: 280px;
+        left: 255px;
+        top: 190px;
+
         border-radius: 100%;
         background: rgba(245, 218, 255, 0.6);
         z-index: -1;
@@ -82,6 +84,7 @@ export const Container = styled.header`
       }
     }
     .right {
+      position: relative;
       margin-top: 90px;
       width: 100%;
       .circleMain {
@@ -99,8 +102,8 @@ export const Container = styled.header`
         position: absolute;
         width: 21px;
         height: 21px;
-        left: 790px;
-        top: 200px;
+        left: 30px;
+        top: 10px;
         border-radius: 100%;
         background: #a0ddff;
       }
@@ -108,8 +111,8 @@ export const Container = styled.header`
         position: absolute;
         width: 9px;
         height: 9px;
-        left: 766px;
-        top: 240px;
+        left: 0px;
+        top: 60px;
         background: #fd661f;
         border-radius: 100%;
       }
@@ -117,8 +120,8 @@ export const Container = styled.header`
         position: absolute;
         width: 21px;
         height: 21px;
-        right: 135px;
-        top: 520px;
+        right: 25px;
+        top: 320px;
         background: #1664fa;
         border-radius: 100%;
       }
@@ -148,8 +151,8 @@ export const Container = styled.header`
           position: absolute;
           width: 200px;
           height: 200px;
-          left: 373px;
-          top: 280px;
+          left: 212px;
+          top: 157px;
           border-radius: 100%;
           background: rgba(245, 218, 255, 0.6);
           z-index: -1;
@@ -221,8 +224,8 @@ export const Container = styled.header`
         .bgCircle {
           width: 117px;
           height: 117px;
-          left: 244px;
-          top: 238px;
+          left: 212px;
+          top: 157px;
         }
         span {
           font-size: 18px;

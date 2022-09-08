@@ -2,10 +2,9 @@ import styled from "styled-components";
 import { device } from "../../components/Response";
 
 export const Container = styled.section`
-  min-height: 100vh;
-  height: 100%;
   padding: 0 6%;
   width: 100%;
+  margin-bottom: 130px;
   .heading {
     display: flex;
     align-items: center;
@@ -27,19 +26,21 @@ export const Container = styled.section`
   }
   @media ${device.laptop} {
     padding: 0 5%;
-    margin-top: 500px;
+    margin-top: 450px;
     .wrapper {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   @media ${device.tablet} {
     padding: 0 4%;
+    margin-top: 400px;
     .wrapper {
       grid-template-columns: repeat(1, 1fr);
     }
   }
   @media ${device.mobileLg} {
     padding: 0 15px;
+    margin-top: 350px;
     .wrapper {
       grid-template-columns: repeat(1, 1fr);
     }
